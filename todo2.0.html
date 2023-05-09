@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todo2.0.css" />
+    <title>TODO list</title>
+  </head>
+  <body>
+    <section class="todo">
+      <div class="todo__inner">
+        <div class="high">
+          <h1 class="todo__title">HIGH PRIORITY</h1>
+          <div class="todo__add todo__add-high">
+            <form class="form" id="form-high">
+              <input type="text" class="todo__add-input add__task-high" placeholder="enter a high priority task" />
+              <button class="todo__add-btn">
+                <img src="images/add-icon.svg" alt="icon" />
+              </button>
+            </form>
+          </div>
+          <div class="high__items"></div>
+        </div>
+
+        <div class="low">
+          <h1 class="todo__title">LOW PRIORITY</h1>
+          <div class="todo__add todo__add-low">
+            <form class="form" id="form-low">
+              <input type="text" class="todo__add-input add__task-low" placeholder="enter a low prirority task" />
+              <button class="todo__add-btn">
+                <img src="images/add-icon.svg" alt="icon" />
+              </button>
+            </form>
+          </div>
+          <div class="low__items"></div>
+        </div>
+      </div>
+    </section>
+    <script src="todo2.0.js"></script>
+  </body>
+</html>

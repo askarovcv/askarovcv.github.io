@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  font-weight: 400;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #292929;
+  border-radius: 3em;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #843465;
+  border-radius: 3em;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: #292929;
+}
+.todo {
+  height: 688px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo__inner {
+  max-width: 492px;
+  background-color: #fff;
+  padding: 8px 20px 15px;
+  min-height: 400px;
+  border-radius: 5px;
+}
+.high {
+  display: flex;
+  row-gap: 8px;
+  flex-direction: column;
+}
+
+.high__items {
+  height: 130px;
+  border: 1px solid #989898;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.todo__title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 10px;
+  letter-spacing: 1px;
+}
+.todo__add {
+  position: relative;
+  padding: 12px 30px 12px 12px;
+  width: 91.1%;
+  border: 1px solid #989898;
+  border-radius: 6px;
+}
+.todo__add-input {
+  width: 436px;
+  font-size: 16px;
+  border: none;
+}
+.todo__add-input:focus {
+  outline: none;
+}
+.todo__add-input::placeholder {
+  font-size: 16px;
+  color: #bbbbbb;
+}
+
+.todo__add-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: auto;
+  right: 5px;
+  top: 10px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.todo__task {
+  border: 1px solid #989898;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 12px;
+  margin-bottom: 5px;
+  width: 420px;
+}
+
+.todo__task-content {
+  padding-left: 33px;
+}
+.todo__icon-delete {
+  margin-left: 15px;
+  border: none;
+  background-image: url('./images/delete-icon.svg ');
+  background-color: inherit;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-top: 5px;
+  width: 17px;
+  height: 16px;
+}
+
+.todo__task-checkbox[type='checkbox'] {
+  display: none;
+}
+.todo__name::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #998899;
+  vertical-align: middle;
+  position: absolute;
+  left: -33px;
+  cursor: pointer;
+}
+
+.todo__name--done {
+  text-decoration: line-through;
+}
+
+.todo__task-checkbox[type='checkbox']:checked + .todo__name::before {
+  content: '';
+  text-align: center;
+  background-color: #b4a1b9;
+  cursor: pointer;
+}
+.todo__task-text {
+  font-size: 18px;
+  width: 370px;
+  position: relative;
+}
+
+.low {
+  display: flex;
+  row-gap: 8px;
+  flex-direction: column;
+}
+
+.low__items {
+  height: 150px;
+  border: 1px solid #989898;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.low__task-checkbox[type='checkbox'] {
+  display: none;
+}
+
+.low__task-text {
+  font-size: 18px;
+  width: 370px;
+  position: relative;
+}
